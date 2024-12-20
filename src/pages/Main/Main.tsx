@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { Button, Theme, useTheme } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import { AppRoutes } from '../../router/routeConfig.tsx';
+import { AppRoutes, RoutePath } from '../../router/routeConfig.tsx';
 
 type Props = {
   className?: string;
@@ -12,7 +12,7 @@ const Main = ({ className }: Props) => {
   const navigate = useNavigate();
 
   const onClickHandler = () => {
-    navigate(AppRoutes.CARDS)
+    navigate(RoutePath[AppRoutes.CARDS])
   };
 
   return (

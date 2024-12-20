@@ -6,6 +6,7 @@ import Chicken from '../../components/models/Chicken.tsx';
 import Medusa from '../../components/models/Medusa.tsx';
 import RockyGround from '../../components/models/RockyGround.tsx';
 import { useNavigate } from 'react-router-dom';
+import { AppRoutes, RoutePath } from '../../router/routeConfig.tsx';
 
 type Props = {
   className?: string;
@@ -47,7 +48,7 @@ const Cards = ({ className }: Props) => {
             position={[0, -2.3, 0]}
             scale={[0.8, 0.8, 0.8]}
             rotation={[-0.1, 0, 0]}
-            onChoose={() => navigate('/hort')}
+            onChoose={() => navigate(RoutePath[AppRoutes.HORT])}
           />
           <RockyGround      rotation={[-0.1, 0, 0]} position={[0, -2.3, 0]} scale={[0.1, 0.1, 0.1]} />
 
