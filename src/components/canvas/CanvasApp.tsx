@@ -33,17 +33,17 @@ const CanvasApp = () => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-
-  const onClickHandler = () => {
-    window.history.back();
-  };
+  //
+  // const onClickHandler = () => {
+  //   window.history.back();
+  // };
 
   return (
     <Wrapper screenHeight={screenHeight}>
 
       <ButtonsContainer>
-        <Button variant={'contained'}
-                onClick={onClickHandler}>Назад</Button>
+        {/*<Button variant={'contained'}*/}
+        {/*        onClick={onClickHandler}>Назад</Button>*/}
         <Button variant={'contained'}
                 onClick={() => setPlayAnimation(!playAnimation)}>Анімація</Button>
         <Button variant={'contained'}
