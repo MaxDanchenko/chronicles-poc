@@ -79,7 +79,7 @@ const CanvasApp = () => {
 
         {/* HDRI Background */}
         <Environment
-          files="/assets/nlf/forest.jpg"
+          files="/assets/nlf/forest2.jpg"
           background
           ground={{ height: 100, radius: 500 }}
         />
