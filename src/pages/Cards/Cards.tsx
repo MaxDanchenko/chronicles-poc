@@ -67,7 +67,7 @@ const Wrapper = styled.div<{ theme: Theme }>`
     width: 100vw;
     overflow-y: auto; /* Enables scrolling */
     scroll-behavior: smooth; /* Smooth scrolling */
-    background: url(/assets/nlf/forest.jpg) no-repeat center center / cover;
+    background: url(/assets/nlf/forest2.jpg) no-repeat center center / cover;
 `;
 const Scrollable = styled.div`
     height: 300vh;
