@@ -1,10 +1,10 @@
 import { Canvas } from '@react-three/fiber';
 import { useEffect, useState } from 'react';
-import Hort from '../models/Hort.tsx';
 import styled from '@emotion/styled';
 import { Button } from '@mui/material';
 import RotatingCamera from '../models/RotatingCamera.tsx';
 import CaptionScroll from '../common/CaptionScroll/CaptionScroll.tsx';
+import { Environment } from '@react-three/drei';
 
 const captions = [
   'Хорт — центральний персонаж нашого епосу,!',
@@ -77,20 +77,20 @@ const CanvasApp = () => {
         <ambientLight intensity={1} />
 
         {/* HDRI Background */}
-        {/*<Environment*/}
-        {/*  files="/assets/nlf/forest2.hdr"*/}
-        {/*  background*/}
-        {/*/>*/}
+        <Environment
+          files="/assets/nlf/forest2.hdr"
+          background
+        />
 
         <RotatingCamera radius={700} lookAt={[0, -80, 0]} speed={cameraSpeed} />
-        <Hort
-          playAnimation={playAnimation}
-          modelLink="/assets/hort-optimized.glb"
-          position={[0, -450, 0]}
-          scale={[250, 250, 250]}
-          listenStory={showCaption}
-          handleCaption={() => setShowCaption(!showCaption)}
-        />
+        {/*<Hort*/}
+        {/*  playAnimation={playAnimation}*/}
+        {/*  modelLink="/assets/hort-optimized.glb"*/}
+        {/*  position={[0, -450, 0]}*/}
+        {/*  scale={[250, 250, 250]}*/}
+        {/*  listenStory={showCaption}*/}
+        {/*  handleCaption={() => setShowCaption(!showCaption)}*/}
+        {/*/>*/}
       </Canvas>
 
       {
@@ -109,7 +109,7 @@ const Wrapper = styled.section<{ screenHeight: number }>`
     width: 100%;
     height: ${({ screenHeight }) => screenHeight}px;
     overflow: hidden;
-    background: url('/assets/nlf/forest2.jpg') no-repeat center center / cover;
+    background: transparent;
 `;
 
 const CaptionWrapper = styled.div`
