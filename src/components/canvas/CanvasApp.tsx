@@ -5,6 +5,7 @@ import { Button } from '@mui/material';
 import RotatingCamera from '../models/RotatingCamera.tsx';
 import CaptionScroll from '../common/CaptionScroll/CaptionScroll.tsx';
 import { Environment } from '@react-three/drei';
+import Hort from '../models/Hort.tsx';
 
 const captions = [
   'Хорт — центральний персонаж нашого епосу,!',
@@ -83,14 +84,14 @@ const CanvasApp = () => {
         />
 
         <RotatingCamera radius={700} lookAt={[0, -80, 0]} speed={cameraSpeed} />
-        {/*<Hort*/}
-        {/*  playAnimation={playAnimation}*/}
-        {/*  modelLink="/assets/hort-optimized.glb"*/}
-        {/*  position={[0, -450, 0]}*/}
-        {/*  scale={[250, 250, 250]}*/}
-        {/*  listenStory={showCaption}*/}
-        {/*  handleCaption={() => setShowCaption(!showCaption)}*/}
-        {/*/>*/}
+        <Hort
+          playAnimation={playAnimation}
+          modelLink="/assets/hort-optimized.glb"
+          position={[0, -450, 0]}
+          scale={[250, 250, 250]}
+          listenStory={showCaption}
+          handleCaption={() => setShowCaption(!showCaption)}
+        />
       </Canvas>
 
       {
