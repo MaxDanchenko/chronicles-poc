@@ -90,7 +90,7 @@ const CanvasApp = () => {
           position={[0, -450, 0]}
           scale={[250, 250, 250]}
           listenStory={showCaption}
-          handleCaption={() => setShowCaption(!showCaption)}
+          handleCaption={() => setShowCaption(true)}
         />
       </Canvas>
 

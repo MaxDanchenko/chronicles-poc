@@ -42,9 +42,9 @@ const Container = styled.div`
     margin: 0 auto;
     border-radius: 20px;
     
-    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
-    backdrop-filter: blur(10px); /* Apply blur effect */
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    //background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+    //backdrop-filter: blur(10px); /* Apply blur effect */
+    //-webkit-backdrop-filter: blur(10px); /* Safari support */
 `;
 
 const ScrollArea = styled.div<{ duration: number }>`
@@ -61,7 +61,6 @@ const ScrollArea = styled.div<{ duration: number }>`
 const Caption = styled.p`
     font-size: 20px;
     margin: 1rem 0;
-    opacity: 0.9; /* Slight transparency for style */
 `;
 
 // Ensure enough content height to loop seamlessly
