@@ -1,10 +1,10 @@
 import styled from '@emotion/styled';
-import { AppRouter } from './router';
+import HortScene from './pages/HortScene/HortScene.tsx';
 
 const App = () => {
   return (
     <Wrapper data-testid="app">
-      <AppRouter />
+      <HortScene />
     </Wrapper>
   );
 };
