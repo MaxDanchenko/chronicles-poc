@@ -44,7 +44,7 @@ const Cards = ({ className }: Props) => {
           <Medusa position={[0, 0, 0]} rotation={[0, 0, 0]} scale={[0.004, 0.004, 0.004]} />
 
           <Hort
-            modelLink="/assets/hort-optimized.glb"
+            modelLink="/assets/hort-optimized2.glb"
             position={[0, -2.3, 0]}
             scale={[0.8, 0.8, 0.8]}
             rotation={[-0.1, 0, 0]}
