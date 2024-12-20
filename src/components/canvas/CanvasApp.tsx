@@ -2,6 +2,7 @@ import { Canvas } from '@react-three/fiber';
 import { useEffect, useState } from 'react';
 import Hort from '../models/Hort.tsx';
 import styled from '@emotion/styled';
+import { Environment } from '@react-three/drei';
 import { Button } from '@mui/material';
 import RotatingCamera from '../models/RotatingCamera.tsx';
 import CaptionScroll from '../common/CaptionScroll/CaptionScroll.tsx';
@@ -77,11 +78,11 @@ const CanvasApp = () => {
         <ambientLight intensity={1} />
 
         {/* HDRI Background */}
-        {/*<Environment*/}
-        {/*  files="/assets/nlf/forest.jpg"*/}
-        {/*  background*/}
-        {/*  ground={{ height: 100, radius: 500 }}*/}
-        {/*/>*/}
+        <Environment
+          files="/assets/nlf/forest.jpg"
+          background
+          ground={{ height: 100, radius: 500 }}
+        />
 
         <RotatingCamera radius={700} lookAt={[0, -80, 0]} speed={cameraSpeed} />
         <Hort
