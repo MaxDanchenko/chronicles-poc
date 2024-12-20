@@ -1,5 +1,5 @@
 import { useAnimations, useGLTF } from '@react-three/drei';
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import useSound from 'use-sound';
 
@@ -30,7 +30,7 @@ const Hort = ({
   const [hovered, setHovered] = useState(false); // Track hover state
   const [play] = useSound('/audio/hort_audio.mp3');
 
-  const handleAudioPlay = () => {
+  const handleAudioPlay = useCallback(() => {
     if (onChoose) {
       onChoose();
       return;
@@ -44,7 +44,7 @@ const Hort = ({
     setTimeout(() => {
       isPlayingRef.current = false;
     }, 31000);
-  };
+  }, [handleCaption, onChoose, play]);
 
   useEffect(() => {
     if (listenStory) {
