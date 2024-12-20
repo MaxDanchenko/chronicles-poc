@@ -12,7 +12,7 @@ const Main = ({ className }: Props) => {
   const navigate = useNavigate();
 
   const onClickHandler = () => {
-    navigate(RoutePath[AppRoutes.CARDS])
+    navigate(RoutePath[AppRoutes.HORT])
   };
 
   return (
