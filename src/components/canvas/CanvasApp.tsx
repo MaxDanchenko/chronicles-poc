@@ -81,7 +81,6 @@ const CanvasApp = () => {
         <Environment
           files="/assets/nlf/forest2.jpg"
           background
-          ground={{ height: 100, radius: 500 }}
         />
 
         <RotatingCamera radius={700} lookAt={[0, -80, 0]} speed={cameraSpeed} />
